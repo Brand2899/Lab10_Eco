@@ -1,3 +1,18 @@
+import { initializeApp } from 'firebase/app';
+import { getDatabase } from 'firebase/database';
+
+import { getFirebaseConfig } from './firebase-config'
+
+//Inicializar firebase
+const firebaseAppConfig = getFirebaseConfig();
+const firebaseApp = initializeApp(firebaseAppConfig);
+
+function registerUser(objetoUsuario){
+    //Obtener base de datos
+    const db = getDatabase();
+    //Escribir un nuevo usuario
+}
+
 //DECLARACIONES
 const nombre = document.getElementById('nombre');
 const apellido = document.getElementById('apellido');
