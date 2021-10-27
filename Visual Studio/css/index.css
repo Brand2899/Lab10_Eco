@@ -1,0 +1,24 @@
+#containerRegistro {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+#containerRegistro * {
+    width: 100%;
+    margin: 5px 10px 5px 10px;
+}
+
+#subtitle{
+    color: white;
+    text-align: center;
+}
+
+#image{
+    width: 20em;
+}
