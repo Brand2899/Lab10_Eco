@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getDatabase } from 'firebase/database';
+import { getDatabase, ref, set } from 'firebase/database';
 
 import { getFirebaseConfig } from './firebase-config'
 
@@ -10,6 +10,8 @@ const firebaseApp = initializeApp(firebaseAppConfig);
 function registerUser(objetoUsuario){
     //Obtener base de datos
     const db = getDatabase();
+    const dbRef = ref(db, 'users');
+    set(dbRef, objetoUsuario);
     //Escribir un nuevo usuario
 }
 
@@ -43,11 +45,6 @@ registrar = () => {
         correo: co,
         contraseña: con
     };
-
-    let json = JSON.stringify(objetoUsuario);
-
-    console.log(objetoUsuario);
-    console.log(json);
 }
 
 bnRegistrar.addEventListener('click', registrar);
